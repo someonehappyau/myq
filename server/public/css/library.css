@@ -1,0 +1,31 @@
+.mynav{
+	border-radius: 0px;
+	border: 0px;
+	border-bottom: 1px #e7e7e7 solid;
+}
+
+.footer {
+	//position: absolute;
+	bottom: 0;
+	margin-top: 20px;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	min-height: 50px;
+	background-color: #f8f8f8;
+	border-top: 1px #e7e7e7 solid;
+}
+
+.container .text-muted {
+	margin: 15px 0;
+}
+
+.maincontainer{
+	padding: 0;
+	box-shadow: 2px 2px 1px #888888;
+	border: 1px #e7e7e7 solid;
+}
+
+.pagetitle{
+	margin-left: auto;
+	margin-right: auto;
+}

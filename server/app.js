@@ -20,6 +20,7 @@ app.use(require('express-session')({
 }));
 
 
+app.use('/',express.static(path.join(__dirname,'../apps/library')));
 app.use('/bower',express.static(path.join(__dirname,'../bower_components')));
 app.use(express.static(__dirname + '/public'));
 
