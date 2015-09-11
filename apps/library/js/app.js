@@ -1,6 +1,7 @@
 'use strict';
 
 var libApp=angular.module('libApp',[
+	'ng',
 	'ngRoute',
 	'ngCookies',
 	'ui.bootstrap',
@@ -24,6 +25,31 @@ libApp.config(['$routeProvider',
 			when('/modelBrand',{
 				templateUrl:'partials/modelBrand.html',
 				controller:'LibModelBrandCtrl'
+			}).
+			when('/modelBrand/:brandName',{
+				templateUrl:'partials/modelBrandModelList.html',
+				controller:'LibModelBrandModelListCtrl',
+				resolve:{
+					validation: ['$route','$location',$q,function($route,$location,$q){
+						var defer=$q.defer();
+						var brandName=$route.current.params.brandName;
+						if(brandName==='honda' ||
+							brandName==='kawasaki' ||
+							brandName==='suzuki' ||
+							brandName==='yamaha' ||
+							brandName==='bmw' ||
+							brandName==='ducati'
+						  ){
+							  defer.resolve();
+							  //continue
+						}
+						else{
+							defer.reject('invalid_brand_name');
+							$location.path('/modelBrand');
+						}
+						return defer.promise;
+					}]
+				}
 			}).
 			when('/modelType',{
 				templateUrl:'partials/modelType.html',
