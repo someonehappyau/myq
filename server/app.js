@@ -24,8 +24,9 @@ app.use(require('express-session')({
 
 app.use('/img',require('./library/router/rtImageLib'));
 
+app.use('/lib',require('./library/router/rtMain'));
+
 //********* End Routers ************
-app.use('/',express.static(path.join(__dirname,'../apps/library')));
 app.use('/bower',express.static(path.join(__dirname,'../bower_components')));
 app.use(express.static(__dirname + '/public'));
 

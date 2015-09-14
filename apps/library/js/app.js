@@ -15,12 +15,16 @@ var libApp=angular.module('libApp',[
 var libControllers=angular.module('libControllers',[]);
 var libServices=angular.module('libServices',['ngResource']);
 
-libApp.config(['$routeProvider',
-	function($routeProvider){
+libApp.config(['$routeProvider','$locationProvider',
+	function($routeProvider,$locationProvider){
 		$routeProvider.
-			when('/lib',{
+			when('/',{
 				templateUrl:'partials/library.html',
-				controller:'LibCtrl'
+				controller:'LibCtrl',
+				resolve:{
+					f1:function(){console.log('lib');},
+					f2:function(){console.log('lib again')}
+				}
 			}).
 			when('/modelBrand',{
 				templateUrl:'partials/modelBrand.html',
@@ -30,7 +34,7 @@ libApp.config(['$routeProvider',
 				templateUrl:'partials/modelBrandModelList.html',
 				controller:'LibModelBrandModelListCtrl',
 				resolve:{
-					validation: ['$route','$location',$q,function($route,$location,$q){
+					validation: ['$route','$location','$q',function($route,$location,$q){
 						var defer=$q.defer();
 						var brandName=$route.current.params.brandName;
 						if(brandName==='honda' ||
@@ -60,6 +64,14 @@ libApp.config(['$routeProvider',
 				controller:'LibModelSearchCtrl'
 			}).
 			otherwise({
-				redirectTo:'/lib'
+				redirectTo:'/',
+				resolve:{
+					function(){console.log('otherwise');}
+				}
+			});
+
+			$locationProvider.html5Mode({
+				enabled:true,
+				requireBase:true
 			});
 }]);
