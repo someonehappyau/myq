@@ -30,7 +30,7 @@ libApp.config(['$routeProvider',
 				templateUrl:'partials/modelBrandModelList.html',
 				controller:'LibModelBrandModelListCtrl',
 				resolve:{
-					validation: ['$route','$location',$q,function($route,$location,$q){
+					validation: ['$route','$location','$q',function($route,$location,$q){
 						var defer=$q.defer();
 						var brandName=$route.current.params.brandName;
 						if(brandName==='honda' ||
