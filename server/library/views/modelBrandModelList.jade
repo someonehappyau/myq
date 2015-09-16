@@ -1,0 +1,22 @@
+extends layout
+
+block content
+	.container-fluid
+		.row
+			.col-md-12
+				a(href="/lib/model/brand") 品牌
+				span #{' / '+brandName}
+		.row.searchResultContainer
+			.col-md-12
+				if models.length>0
+					each val in models
+						if (typeof(val.yearEnd)==='undefined')
+							val.yearEnd='NA'
+						.row
+							.col-md-12
+								a(href="/lib/model/#{val.label}?y1=#{val.yearStart}&y2=#{val.yearEnd}") #{val.label}_#{val.yearStart}_#{val.yearEnd}
+				else
+					.row
+						.col-md-12
+							span 没有搜索结果。
+						

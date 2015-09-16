@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title MYQ
+
+    link(rel='stylesheet', href='/bower/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet', href='/bower/bootstrap/dist/css/bootstrap-theme.css')
+    link(rel='stylesheet', href='/css/library.css')
+
+  body
+   .row
+    .col-lg-2.col-md-1
+    .col-lg-8.col-md-10(class="maincontainer")
+      include header.jade
+
+      block content
+
+      include footer.jade
+    .col-lg-2.col-md-1
+
+  include layoutscript.jade

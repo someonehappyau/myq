@@ -6,11 +6,17 @@ var cookieParser=require('cookie-parser');
 
 var app=express();
 
+//View engine setup
+app.set('views',[__dirname+'/library/views']);
+app.set('view engine','jade');
+
+//logger and parser
 app.use(cookieParser());
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
+/*
 app.use(require('express-session')({
 	secret: 'cat',
 	resave: false,
@@ -18,15 +24,18 @@ app.use(require('express-session')({
 	cookie:{path:'/',maxAge:900000},
 	rolling:true
 }));
+*/
 
-
+//app.use('/lib',express.static(path.join(__dirname,'../apps/library')));
 //********* Routers ****************
 
 app.use('/img',require('./library/router/rtImageLib'));
 
+app.use('/lib',require('./library/router/rtMCModel'));
 app.use('/lib',require('./library/router/rtMain'));
 
 //********* End Routers ************
+
 app.use('/bower',express.static(path.join(__dirname,'../bower_components')));
 app.use(express.static(__dirname + '/public'));
 

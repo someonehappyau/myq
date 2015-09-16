@@ -1,3 +1,8 @@
+body{
+	font-family:"Microsfot YaHei","微软雅黑";
+	font-size:16px;
+}
+
 .mynav{
 	border-radius: 0px;
 	border: 0px;
@@ -33,5 +38,10 @@
 .brandListImgContainer{
 	height:114px;
 	width:114px;
-};
+	margin:auto;
+}
+
+.searchResultContainer{
+	padding:20px;
+}
 

@@ -1,24 +1,17 @@
 'use strict';
 
 var fs=require('fs');
+var request=require('request');
 
 var cfg=require('../../cfg/cfg');
 
 function getImage(imgType,imgName,res){
-	var r;
-	if (imgType==='brand'){
-		r=fs.createReadStream(cfg.imageLib.model.brand+imgName);
-	}
-	else{
-		r=null;
-	}
-
-	if (!r){
-		res.status(404).end();
-	}
-	else{
-		r.pipe(res);
-	}
+	request.get('http://localhost:3011/img/'+imgType+'/'+imgName,{encoding:null},function(err,response,body){
+			if (!err && response.statusCode===200)
+				res.status(200).end(body);
+			else
+				res.status(response.statusCode).end();
+		});
 };
 
 module.exports={
