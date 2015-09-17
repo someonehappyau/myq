@@ -7,6 +7,8 @@ var cfg=require('../../cfg/cfg');
 
 function getImage(imgType,imgName,res){
 	request.get('http://localhost:3011/img/'+imgType+'/'+imgName,{encoding:null},function(err,response,body){
+			console.log(err);
+			console.log(response);
 			if (!err && response.statusCode===200)
 				res.status(200).end(body);
 			else
