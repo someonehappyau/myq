@@ -12,7 +12,8 @@ function getCfgJson(cfgPath){
 var setting={
 	db:getCfgJson('./cfgDbSetting.json'),
 	imageLib:cfgImageLib,
-	imageSize:getCfgJson('./cfgGalleryImageSize.json')
+	imageSize:getCfgJson('./cfgGalleryImageSize.json'),
+	myqws:getCfgJson('./cfgMyqWS.json')
 };
 
 module.exports=setting;

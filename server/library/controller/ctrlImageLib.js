@@ -5,15 +5,16 @@ var request=require('request');
 
 var cfg=require('../../cfg/cfg');
 
-function getImage(imgType,imgName,res){
-	request.get('http://localhost:3011/img/'+imgType+'/'+imgName,{encoding:null},function(err,response,body){
-			console.log(err);
-			console.log(response);
-			if (!err && response.statusCode===200)
-				res.status(200).end(body);
-			else
-				res.status(response.statusCode).end();
-		});
+function getImage(req,res){
+	request.get({
+		baseUrl: cfg.myqws.url,
+		uri: '/img/'+req.params.imgType+'/'+req.params.imgName,
+		//encoding: null
+	})
+	.on('error',function(err){
+		res.status(404).end();
+	})
+	.pipe(res);
 };
 
 module.exports={
