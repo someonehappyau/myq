@@ -14,13 +14,14 @@ function getModelsByBrandName(req,res){
 			},
 			function(err,response,body){
 				if (err)
-					res.redirect('/lib/model/brand');
-					//res.status(500).end(JSON.stringify(err));
+					//res.redirect('/lib/model/brand');
+					res.status(500).end(JSON.stringify(err));
 				else 
 					if (response.statusCode===200)
 						res.status(200).render('modelBrandModelList',{brandName:req.params.brandName,models:JSON.parse(body).data});
 					else
-						res.status(response.statusCode).end();
+						res.redirect('/lib/model/brand');
+						//res.status(response.statusCode).end();
 			});
 };
 
@@ -33,15 +34,19 @@ function getModelDetailByModelName(req,res){
 				uri: '/mc/model/'+req.params.modelName+'?yearStart='+req.query.yearStart+'&yearEnd='+req.query.yearEnd
 			},
 			function(err,response,body){
-				if(!err && response.statusCode===200){
-					var msg=JSON.parse(body);
-					if (!msg.data)
-						res.redirect('/lib/model/brand');
-					else
-						res.status(200).render('modelDetail',{model:msg.data});
-				}
+				if (err)
+					res.status(500).end(JSON.stringify(err));
 				else
-					res.status(response.statusCode).end();
+					if (response.statusCode===200){
+						var msg=JSON.parse(body);
+						if (!msg.data)
+							res.redirect('/lib/model/brand');
+						else
+							res.status(200).render('modelDetail',{model:msg.data});
+					}
+					else
+						res.redirect('/lib/model/brand');
+						//res.status(response.statusCode).end();
 			});
 };
 
