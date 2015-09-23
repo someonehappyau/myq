@@ -1,24 +1,24 @@
 extends layout
 
 block content
-	.container-fluid
-		.row
-			.col-md-12
-				a(href="/lib/model/brand") 品牌
-				span &nbsp;/&nbsp;
-				a(href="/lib/model/brand/#{model.model.makerLabel}") #{model.model.makerLabel}
-				span #{' / '+model.model.label+' '+model.model.yearStart+'-'+model.model.yearEnd}
+	.container-fluid.page-specs
 		.row.searchResultContainer
 			.col-md-12
+				ol.mybreadcrumb.breadcrumb
+					li
+						a(href="/lib/model/brand") 品牌
+					li
+						a(href="/lib/model/brand/#{model.model.makerLabel}") #{model.model.makerLabel}
+					li.active #{model.model.label+' '+model.model.yearStart+'-'+model.model.yearEnd}
 				.row
 					.col-md-12
 						.carousel.slide#myCarousel(data-ride="carousel")
 							ol.carousel-indicators
 								each img,index in model.gallery
 									if (index===0)
-										li.active(data-targer="#myCarousel" data-slide-to="#{index}")
+										li.active(data-target="#myCarousel" data-slide-to="#{index}")
 									else
-										li(data-targer="#myCarousel" data-slide-to="#{index}")
+										li(data-target="#myCarousel" data-slide-to="#{index}")
 							.carousel-inner(role="listbox")
 								each img,index in model.gallery
 									if (index===0)
@@ -27,12 +27,84 @@ block content
 									else
 										.item
 											img(src="/img/web/"+img.picFileName)
+							a.left.carousel-control(href='#myCarousel' role='button' data-slide='prev')
+								span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+								span.sr-only Previous
+							a.right.carousel-control(href='#myCarousel' role='button' data-slide='next')
+								span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+								span.sr-only Next
 
 				.row
 					.col-md-12
 						if (typeof(model)!=='undefined')
-							ul
-								li=model.label
-								li=model.makerLabel
-				
+							each val in specs
 
+								.specs.specs-header
+									.row
+										.col-md-12
+											h3.specs-header-title #{val.name}
+								each data in val.content
+									.specs
+										.row
+											.col-md-3 
+												h4.specs-title #{data.name}
+											.col-md-8
+												.specs-content #{data.content}
+
+							.specs.specs-header
+								.row
+									.col-md-12
+										h3.specs-header-title 发动机
+							.specs
+								.row
+									.col-md-3 
+										h4.specs-title 形式
+									.col-md-8
+										.specs-content 直列 四缸 四冲程
+							.specs
+								.row
+									.col-md-3 
+										h4.specs-title 缸径、冲程（mm)
+									.col-md-8
+										.specs-content 27.5 x 22.5
+							.specs
+								.row
+									.col-md-3 
+										h4.specs-title 形式
+									.col-md-8
+										.specs-content 直列 四缸 四冲程
+							.specs
+								.row
+									.col-md-3 
+										h4.specs-title 形式
+									.col-md-8
+										.specs-content 直列 四缸 四冲程
+							
+							.specs.specs-header
+								.row
+									.col-md-12
+										h3.specs-header-title 车架
+							.specs
+								.row
+									.col-md-3 
+										h4.specs-title 形式
+									.col-md-8
+										.specs-content 直列 四缸 四冲程
+							.specs
+								.row
+									.col-md-3 
+										h4.specs-title 缸径、冲程（mm)
+									.col-md-8
+										.specs-content 27.5 x 22.5
+							.specs
+								.row
+									.col-md-3 
+										h4.specs-title 形式
+									.col-md-8
+										.specs-content 直列 四缸 四冲程
+							.specs
+								.row
+									.col-md-3 
+										h4.specs-title 形式
+									.col-md-8
+										.specs-content 直列 四缸 四冲程

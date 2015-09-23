@@ -42,12 +42,37 @@ function getModelDetailByModelName(req,res){
 						if (!msg.data)
 							res.redirect('/lib/model/brand');
 						else
-							res.status(200).render('modelDetail',{model:msg.data});
+							res.status(200).render('modelDetail',{model:msg.data,specs:composeModelSpecs(msg.data)});
 					}
 					else
 						res.redirect('/lib/model/brand');
 						//res.status(response.statusCode).end();
 			});
+};
+
+function composeModelSpecs(data){
+	var ret=[];
+
+	if (!!data.engine){
+		var eng=data.engine;
+		var engcontent=[];
+		engcontent.push({
+			name:'形式',
+			content:'直列四缸四冲'
+		});
+		engcontent.push({
+			name:'马力',
+			content:'90KW'
+		});
+		ret.push({
+			name:'发动机',
+			content:engcontent
+		});		
+	}
+
+	console.log(ret);
+
+	return ret;
 };
 
 module.exports={

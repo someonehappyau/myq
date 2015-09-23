@@ -6,7 +6,9 @@ body{
 .mynav{
 	border-radius: 0px;
 	border: 0px;
-	border-bottom: 1px #e7e7e7 solid;
+	//border-bottom: 1px #e7e7e7 solid;
+	max-width: 980px;
+	padding:0;
 }
 
 .footer {
@@ -26,8 +28,8 @@ body{
 
 .maincontainer{
 	padding: 0;
-	box-shadow: 2px 2px 1px #888888;
-	border: 1px #e7e7e7 solid;
+	//box-shadow: 2px 2px 1px #888888;
+	//border: 1px #e7e7e7 solid;
 }
 
 .pagetitle{
@@ -36,16 +38,57 @@ body{
 }
 
 .brandListImgContainer{
-	height:114px;
-	width:114px;
-	margin:auto;
+	height: 114px;
+	width: 114px;
+	margin: auto;
 }
 
 .searchResultContainer{
-	padding:20px;
+	padding: 0;
 }
 
 .carousel{
-	height:600px;
-	margin-bottom:60px;
+	height: 735px;
+	margin-bottom: 60px;
+}
+
+.item > img{
+	max-height: 735px;
+	margin: auto;
+}
+
+.page-specs{
+	max-width: 980px;
+	padding:0;
+}
+
+.page-specs .mybreadcrumb{
+	background-color: #fff;
+	padding: 8px 0;
+}
+
+.page-specs .specs{
+	padding: 1em 0;
+	border-top: 1px solid #d6d6d6;
+	margin: 0 auto;
+	max-width:980px;
+}
+
+.page-specs .specs-header{
+	background: rgba(0,0,0,0.8);
+}
+
+.page-specs .specs-header-title{
+	color: #fff;
+	margin-top: 0;
+	margin-left: 20px;
+}
+
+.page-specs .specs-title{
+	margin-top: 0;
+	margin-left: 20px;
+}
+
+.page-specs .specs-content{
+	font-size: 16px;
 }
