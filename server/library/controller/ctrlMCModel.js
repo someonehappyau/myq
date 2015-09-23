@@ -53,26 +53,50 @@ function getModelDetailByModelName(req,res){
 function composeModelSpecs(data){
 	var ret=[];
 
-	if (!!data.engine){
-		var eng=data.engine;
-		var engcontent=[];
-		engcontent.push({
+	console.log(data);
+
+	if (data.engine.length>0){
+		var eng=data.engine[0];
+		var engContent=[];
+		engContent.push({
 			name:'形式',
-			content:'直列四缸四冲'
+			content:eng.engFormatLabel+eng.engCylCount+'缸'
 		});
-		engcontent.push({
+		engContent.push({
 			name:'马力',
-			content:'90KW'
+			content:eng.engMaxPowerKW+'kw ('+eng.engMaxPowerHP+'ps) @ '+eng.engMaxPowerRPM+'RPM'
 		});
 		ret.push({
 			name:'发动机',
-			content:engcontent
+			content:engContent
 		});		
 	}
 
-	console.log(ret);
+	if (data.frame.length>0){
+		var frame=data.frame[0];
+		var frameContent=[];
+
+		frameContent.push({
+			name:'形式',
+			content:frame.frameMaterialLabel+frame.frameTypeLabel
+		});
+
+		pushItem(frameContent,'前倾角',frame.frameRake);
+		pushItem(frameContent,'拖曳距',frame.frameTrail);
+		
+		pushItem(ret,'车架',frameContent);
+	}
+
+	console.log(JSON.stringify(ret));
 
 	return ret;
+};
+
+function pushItem(arr,name,content){
+	arr.push({
+		name:name,
+		content:content
+	});
 };
 
 module.exports={
