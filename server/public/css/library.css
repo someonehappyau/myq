@@ -48,12 +48,12 @@ body{
 }
 
 .carousel{
-	height: 735px;
+	height: 570px;
 	margin-bottom: 60px;
 }
 
 .item > img{
-	max-height: 735px;
+	max-height: 570px;
 	margin: auto;
 }
 
