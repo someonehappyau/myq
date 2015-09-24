@@ -57,6 +57,11 @@ body{
 	margin: auto;
 }
 
+.page-model{
+	max-width: 980px;
+	padding:0;
+}
+
 .page-specs{
 	max-width: 980px;
 	padding:0;
