@@ -1,6 +1,6 @@
-extends layout
+extends main
 
-block content
+block mainwindow
 	.container-fluid.page-specs
 		.row.searchResultContainer
 			.col-md-12
@@ -10,29 +10,30 @@ block content
 					li
 						a(href="/lib/model/brand/#{model.makerLabel}") #{model.makerLabel}
 					li.active #{model.label+' '+model.yearStart+'-'+model.yearEnd}
-				.row
-					.col-md-12
-						.carousel.slide#myCarousel(data-ride="carousel")
-							ol.carousel-indicators
-								each img,index in gallery
-									if (index===0)
-										li.active(data-target="#myCarousel" data-slide-to="#{index}")
-									else
-										li(data-target="#myCarousel" data-slide-to="#{index}")
-							.carousel-inner(role="listbox")
-								each img,index in gallery
-									if (index===0)
-										.item.active
-											img(src="/img/web/"+img.picFileName)
-									else
-										.item
-											img(src="/img/web/"+img.picFileName)
-							a.left.carousel-control(href='#myCarousel' role='button' data-slide='prev')
-								span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
-								span.sr-only Previous
-							a.right.carousel-control(href='#myCarousel' role='button' data-slide='next')
-								span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
-								span.sr-only Next
+				if (gallery.length>0)
+					.row
+						.col-md-12
+							.carousel.slide#myCarousel(data-ride="carousel")
+								ol.carousel-indicators
+									each img,index in gallery
+										if (index===0)
+											li.active(data-target="#myCarousel" data-slide-to="#{index}")
+										else
+											li(data-target="#myCarousel" data-slide-to="#{index}")
+								.carousel-inner(role="listbox")
+									each img,index in gallery
+										if (index===0)
+											.item.active
+												img(src="/img/web/"+img.picFileName)
+										else
+											.item
+												img(src="/img/web/"+img.picFileName)
+								a.left.carousel-control(href='#myCarousel' role='button' data-slide='prev')
+									span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+									span.sr-only Previous
+								a.right.carousel-control(href='#myCarousel' role='button' data-slide='next')
+									span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+									span.sr-only Next
 
 				.row
 					.col-md-12
@@ -41,15 +42,15 @@ block content
 
 								.specs.specs-header
 									.row
-										.col-md-1
-										.col-md-3
+										.col-md-1.col-xs-1
+										.col-md-3.col-xs-12
 											h3.specs-header-title #{val.name}
 								each data in val.content
 									.specs
 										.row
-											.col-md-1
-											.col-md-3 
+											.col-md-1.col-xs-1
+											.col-md-3.col-xs-12 
 												h4.specs-title #{data.name}
-											.col-md-8
+											.col-md-8.col-xs-12
 												.specs-content #{data.content}
 
