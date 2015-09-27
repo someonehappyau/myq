@@ -18,7 +18,7 @@ function getModelsByBrandName(req,res){
 					res.status(500).end(JSON.stringify(err));
 				else 
 					if (response.statusCode===200)
-						res.status(200).render('modelBrandModelList',{brandName:req.params.brandName,models:JSON.parse(body).data});
+						res.status(200).render('model/modelBrandModelList',{brandName:req.params.brandName,models:JSON.parse(body).data});
 					else
 						res.redirect('/lib/model/brand');
 						//res.status(response.statusCode).end();
@@ -42,7 +42,7 @@ function getModelDetailByModelName(req,res){
 						if (!msg.data)
 							res.redirect('/lib/model/brand');
 						else
-							res.status(200).render('modelDetail',msg.data);
+							res.status(200).render('model/modelDetail',msg.data);
 					}
 					else
 						res.redirect('/lib/model/brand');

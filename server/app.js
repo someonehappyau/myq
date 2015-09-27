@@ -32,7 +32,11 @@ app.use(require('express-session')({
 app.use('/img',require('./library/router/rtImageLib'));
 
 app.use('/lib',require('./library/router/rtMCModel'));
+app.use('/lib',require('./library/router/rtRace'));
+
+//Leave rtMain at last.
 app.use('/lib',require('./library/router/rtMain'));
+
 
 //********* End Routers ************
 

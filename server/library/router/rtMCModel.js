@@ -8,7 +8,7 @@ var request=require('request');
 var ctrlMCModel=require('../controller/ctrlMCModel');
 
 router.get('/model/brand',function(req,res){
-	res.status(200).render('modelBrand');
+	res.status(200).render('model/modelBrand');
 });
 
 router.get('/model/brand/:brandName',function(req,res){
