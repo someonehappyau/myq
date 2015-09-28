@@ -9,13 +9,11 @@ html
     link(rel='stylesheet', href='/css/library.css')
     link(rel='stylesheet', href='/css/libraryrace.css')
 
+    include layoutscript.jade
   body
-   .row
-    .col-md-12(class="maincontainer")
+    .container-fluid
       include header.jade
 
       block content
 
       include footer.jade
-
-  include layoutscript.jade

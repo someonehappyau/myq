@@ -11,6 +11,10 @@ router.get('/race/motogp',function(req,res){
 	res.status(200).render('race/motogp');
 });
 
+router.get('/race/motogp/2015',function(req,res){
+	res.status(200).render('race/motogp_2015');
+});
+
 //router.get('/model/brand/:brandName',function(req,res){
 //	ctrlMCModel.getModelsByBrandName(req,res);
 //});
