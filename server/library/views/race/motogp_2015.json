@@ -1,0 +1,56 @@
+{
+	"riderStanding":[
+		{"position":"1","name":"Valentino ROSSI（罗西）","bike":"Yamaha","nation":"意大利","points":"263","short":""},
+
+		{"position":"2","name":"Jorge LORENZO（洛伦佐）","bike":"Yamaha","nation":"西班牙","points":"249","short":"14"},
+
+		{"position":"3","name":"Marc MARQUEZ（马奎兹）","bike":"Honda","nation":"西班牙","points":"184","short":"65"},
+
+		{"position":"4","name":"Andrea IANNONE","bike":"Ducati","nation":"意大利","points":"172","short":"12"},
+
+		{"position":"5","name":"Bradley SMITH","bike":"Yamaha","nation":"英国","points":"143","short":"29"},
+
+		{"position":"6","name":"Andrea DOVIZIOSO","bike":"Ducati","nation":"意大利","points":"139","short":"4"},
+
+		{"position":"7","name":"Dani PEDROSA（佩德罗萨）","bike":"Honda","nation":"西班牙","points":"129","short":"10"},
+
+		{"position":"8","name":"Danilo PETRUCCI","bike":"Ducati","nation":"意大利","points":"93","short":"36"},
+
+		{"position":"9","name":"Cal CRUTCHLOW","bike":"Honda","nation":"英国","points":"88","short":"5"},
+
+		{"position":"10","name":"Pol ESPARGARO","bike":"Yamaha","nation":"西班牙","points":"88","short":"0"},
+
+		{"position":"11","name":"Aleix ESPARGARO","bike":"Suzuki","nation":"西班牙","points":"76","short":"12"},
+
+		{"position":"12","name":"Maverick VIÑALES","bike":"Suzuki","nation":"西班牙","points":"74","short":"2"},
+
+		{"position":"13","name":"Scott REDDING","bike":"Honda","nation":"英国","points":"67","short":"7"},
+
+		{"position":"14","name":"Yonny HERNANDEZ","bike":"Ducati","nation":"哥伦比亚","points":"47","short":"20"},
+
+		{"position":"15","name":"Loris BAZ","bike":"Yamaha Forward","nation":"法国","points":"28","short":"19"},
+
+		{"position":"16","name":"Alvaro BAUTISTA","bike":"Aprilia","nation":"西班牙","points":"26","short":"2"},
+
+		{"position":"17","name":"Hector BARBERA","bike":"Ducati","nation":"西班牙","points":"23","short":"3"},
+
+		{"position":"18","name":"Jack MILLER","bike":"Honda","nation":"澳大利亚","points":"16","short":"7"},
+
+		{"position":"19","name":"Nicky HAYDEN","bike":"Honda","nation":"美国","points":"13","short":"3"},
+
+		{"position":"20","name":"Stefan BRADL","bike":"Aprilia","nation":"德国","points":"11","short":"2"},
+
+		{"position":"21","name":"Eugene LAVERTY","bike":"Honda","nation":"爱尔兰","points":"9","short":"2"},
+
+		{"position":"22","name":"Michele PIRRO","bike":"Ducati","nation":"意大利","points":"8","short":"1"},
+
+		{"position":"23","name":"Mike DI MEGLIO","bike":"Ducati","nation":"法国","points":"7","short":"1"},
+
+		{"position":"24","name":"Hiroshi AOYAMA","bike":"Honda","nation":"日本","points":"5","short":"2"},
+
+		{"position":"25","name":"Alex DE ANGELIS","bike":"ART","nation":"圣马力诺","points":"2","short":"3"}
+
+	]
+}
+
+		

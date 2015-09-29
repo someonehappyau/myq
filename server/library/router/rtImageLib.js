@@ -5,7 +5,7 @@ var router=express.Router();
 
 var ctrlImageLib=require('../controller/ctrlImageLib');
 
-router.get('/:imgType/:imgName',function(req,res){
+router.get('/:imgType/:imgName*',function(req,res){
 	ctrlImageLib.getImage(req,res);
 });
 

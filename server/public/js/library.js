@@ -1,17 +1,28 @@
 		$(window).scroll(function(){
-			console.log($("#inner-menubar-fluid").height());
-			var fluid=$("#inner-menubar-fluid");
-			var menu=$("#inner-menu");
+			var mainmenu=$("#main-menubar");
+			var innermenu=$("#inner-menubar");
+			var innermenufluid=$("#inner-menubar-fluid");
+			var innermenuitems=$("#inner-menu");
+			var sidemenu=$("#side-menubar");
 
-			if ($(window).scrollTop()>=50){
-				$("#inner-menubar").addClass("inner-menubar-sticky");
-				if (fluid.height()<=menu.height())
-					$("#inner-menubar-placeholder").height(menu.height());
+			if ($(window).scrollTop()>=mainmenu.outerHeight()){
+				innermenu.addClass("inner-menubar-sticky");
+				if (innermenufluid.height()<=innermenuitems.height())
+					$("#inner-menubar-placeholder").height(innermenuitems.height());
 				else
-					$("#inner-menubar-placeholder").height(fluid.height());
+					$("#inner-menubar-placeholder").height(innermenufluid.height());
 			}
 			else{
-				$("#inner-menubar").removeClass("inner-menubar-sticky");
+				innermenu.removeClass("inner-menubar-sticky");
 				$("#inner-menubar-placeholder").height(0);
 			}
+
+			if ($(window).scrollTop()>=($("#side-menubar-wrapper").offset().top-innermenu.outerHeight()-20)){
+				sidemenu.css({position:'fixed',top:innermenu.outerHeight()+20});
+			}
+			else{
+				sidemenu.css({position:'relative',top:''});
+			}
+
+				
 		});
