@@ -3,6 +3,39 @@
 	padding-top:60px;
 }
 
-.clendar-wrapper{
+.calendar-wrapper{
+}
 
+.circuit-img{
+	width:100%;
+}
+
+.calendar-wrapper .rider-img{
+	width:100%;
+}
+
+.podium-section{
+	padding:10px;
+	border-top: 1px solid #ddd;
+}
+
+.podium-section .panel{
+	margin:0;
+}
+
+.podium-section .panel-body{
+	padding:0;
+}
+
+.podium-section .panel-heading{
+	font-size:14px;
+}
+
+.podium-section .rider-content{
+	padding: 0 2px;
+}
+
+.circuit-section{
+	margin-top:10px;
+	margin-bottom:10px;
 }

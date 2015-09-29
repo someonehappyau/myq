@@ -13,7 +13,10 @@ router.get('/race/motogp',function(req,res){
 
 router.get('/race/motogp/2015',function(req,res){
 	ctrlRace.getMotogp2015(req,res);
-	//res.status(200).render('race/motogp_2015');
+});
+
+router.get('/race/motogp/2016',function(req,res){
+	ctrlRace.getMotogp2016(req,res);
 });
 
 //router.get('/model/brand/:brandName',function(req,res){

@@ -1,0 +1,33 @@
+extends ../main
+
+block inner-menubar
+	include motogp_inner_menubar.jade
+
+block mainwindow
+	.container-fluid
+		.row
+			.col-md-12.col-xs-12
+				.row(id="inner-menubar-placeholder")
+				.row
+					.col-md-12.col-xs-12
+						h1.pagetitle.text-center 2016年赛程 
+							small MotoGP 世界摩托车锦标赛
+				.row
+					.col-md-10
+						#championStanding.title
+							.row
+								.col-md-12.col-xs-12
+									h3.text-center 暂无资料
+					.col-md-2#side-menubar-wrapper
+						nav.hidden-xs.hidden-sm#side-menubar
+							ul.nav
+								li
+									a(href="#main-menubar") Back to Top
+								li
+									a(href="#championStanding") 年度积分排行榜
+								li
+									a(href="#calendar") 赛程
+								li
+									a(href="#team") 车队
+								li
+									a(href="#rider") 赛车手

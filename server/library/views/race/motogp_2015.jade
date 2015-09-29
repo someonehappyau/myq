@@ -28,7 +28,7 @@ block mainwindow
 												th 车辆
 												th 国籍
 												th 总分
-												th 落后前一名
+												th 落后
 
 										tbody
 											each rider,index in riderStanding
@@ -45,17 +45,56 @@ block mainwindow
 								.col-md-12.col-xs-12
 									h3.text-center 赛程
 
-							.row.calendar-wrapper
-								.col-md-6.col-xs-12
-									.row
-										.col-md-3.col-xs-3
-											4月29日
-										.col-md-9.col-xs-9
-											p Commercial Bank Grand Prix of Qatar
-											p Losail International Circuit
-									.row
-										.col-md-12.col-xs-12
-											img(src="/img/motogp/circuit/2015/QAT.jpg")
+							.calendar-wrapper.panel.panel-default
+								.panel-heading
+									h3.panel-title 第一场  Commercial Bank Grand Prix of Qatar
+								.panel-heading 4月29日
+								.panel-heading 卡塔尔
+								.panel-heading Losail International Circuit
+
+
+								.panel-body
+
+									.row.circuit-section
+										.col-md-6.col-xs-12
+											img.circuit-img(src="/img/motogp/circuit/2015/QAT_detail.png")
+										.col-md-6.col-xs-12
+											table.table.table-default
+												tr 
+													td 赛道长度
+													td 5.4公里
+												tr 
+													td 左弯
+													td 6个
+												tr 
+													td 右弯
+													td 12个
+												tr 
+													td 最长直道
+													td 1068米
+												tr 
+													td 最快圈速
+													td 1'53.927
+									.row.podium-section
+										.rider-content.col-md-4.col-xs-12
+											.panel.panel-default
+												.panel-heading.text-center 第一名
+												.panel-heading.text-center Valentino ROSSI（罗西）
+												.panel-body 
+													img.rider-img(src="/img/motogp/rider/2015/rider_rossi.jpg")
+										.rider-content.col-md-4.col-xs-12
+											.panel.panel-default
+												.panel-heading.text-center 第二名
+												.panel-heading.text-center Andrea DOVIZIOSO
+												.panel-body
+													img.rider-img(src="/img/motogp/rider/2015/rider_dovizioso.jpg")
+										.rider-content.col-md-4.col-xs-12
+											.panel.panel-default
+												.panel-heading.text-center 第三名
+												.panel-heading.text-center Andrea IANNONE
+												.panel-body
+													img.rider-img(src="/img/motogp/rider/2015/rider_iannone.jpg")
+							
 									
 							p AAAAAAA
 							p AAAAAAA
@@ -119,8 +158,6 @@ block mainwindow
 						nav.hidden-xs.hidden-sm#side-menubar
 							ul.nav
 								li
-									a(href="#main-menubar") Back to Top
-								li
 									a(href="#championStanding") 年度积分排行榜
 								li
 									a(href="#calendar") 赛程
@@ -128,3 +165,5 @@ block mainwindow
 									a(href="#team") 车队
 								li
 									a(href="#rider") 赛车手
+								li
+									a(href="#main-menubar") 回到顶端
