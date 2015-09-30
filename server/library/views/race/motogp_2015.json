@@ -50,6 +50,64 @@
 
 		{"position":"25","name":"Alex DE ANGELIS","bike":"ART","nation":"圣马力诺","points":"2","short":"3"}
 
+	],
+
+	"calendar":[
+		{
+			"date":			"3月29日",
+			"place":		"卡塔尔",
+			"racename":		"Commercial Bank Grand Prix of Qatar",
+			"circuitname":	"Losail International Circuit",
+			"circuitdetail":"detail_qat_losail.png",
+			"cir_length":	"5.4公里",
+			"cir_lturns":	"6个",
+			"cir_rturns":	"12个",
+			"cir_straight":	"1068米",
+			"cir_record":	"1'53.927",
+			"p1_name":		"Valentino ROSSI（罗西）",
+			"p1_photo":		"rider_rossi.jpg",
+			"p2_name":		"Andrea DOVIZIOSO",
+			"p2_photo":		"rider_dovizioso.jpg",
+			"p3_name":		"Andrea IANNONE",
+			"p3_photo":		"rider_iannone.jpg"
+		},
+		{
+			"date":			"4月12日",
+			"place":		"美国",
+			"racename":		"Red Bull Grand Prix of The Americas",
+			"circuitname":	"Circuit Of The Americas",
+			"circuitdetail":"detail_us_americas.png",
+			"cir_length":	"5.5公里",
+			"cir_lturns":	"11个",
+			"cir_rturns":	"9个",
+			"cir_straight":	"1200米",
+			"cir_record":	"2'03.575",
+			"p1_name":		"Marc MARQUEZ（马奎兹）",
+			"p1_photo":		"rider_marquez.jpg",
+			"p2_name":		"Andrea DOVIZIOSO",
+			"p2_photo":		"rider_dovizioso.jpg",
+			"p3_name":		"Valentino ROSSI（罗西）",
+			"p3_photo":		"rider_rossi.jpg"
+		},
+		{
+			"date":			"月日",
+			"place":		"",
+			"racename":		"",
+			"circuitname":	"",
+			"circuitdetail":"detail_.png",
+			"cir_length":	"公里",
+			"cir_lturns":	"个",
+			"cir_rturns":	"个",
+			"cir_straight":	"米",
+			"cir_record":	"",
+			"p1_name":		"",
+			"p1_photo":		"rider_.jpg",
+			"p2_name":		"",
+			"p2_photo":		"rider_.jpg",
+			"p3_name":		"",
+			"p3_photo":		"rider_.jpg"
+		}
+
 	]
 }
 

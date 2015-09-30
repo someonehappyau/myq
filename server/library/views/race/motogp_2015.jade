@@ -45,75 +45,56 @@ block mainwindow
 								.col-md-12.col-xs-12
 									h3.text-center 赛程
 
-							.calendar-wrapper.panel.panel-default
-								.panel-heading
-									h3.panel-title 第一场  Commercial Bank Grand Prix of Qatar
-								.panel-heading 4月29日
-								.panel-heading 卡塔尔
-								.panel-heading Losail International Circuit
+							each race in calendar
+								.calendar-wrapper.panel.panel-default
+									.panel-heading.text-center #{race.date}
+									.panel-heading.text-center #{race.place}
+									.panel-heading.text-center #{race.racename}
+									.panel-heading.text-center #{race.circuitname}
 
+									.panel-body
 
-								.panel-body
-
-									.row.circuit-section
-										.col-md-6.col-xs-12
-											img.circuit-img(src="/img/motogp/circuit/2015/QAT_detail.png")
-										.col-md-6.col-xs-12
-											table.table.table-default
-												tr 
-													td 赛道长度
-													td 5.4公里
-												tr 
-													td 左弯
-													td 6个
-												tr 
-													td 右弯
-													td 12个
-												tr 
-													td 最长直道
-													td 1068米
-												tr 
-													td 最快圈速
-													td 1'53.927
-									.row.podium-section
-										.rider-content.col-md-4.col-xs-12
-											.panel.panel-default
-												.panel-heading.text-center 第一名
-												.panel-heading.text-center Valentino ROSSI（罗西）
-												.panel-body 
-													img.rider-img(src="/img/motogp/rider/2015/rider_rossi.jpg")
-										.rider-content.col-md-4.col-xs-12
-											.panel.panel-default
-												.panel-heading.text-center 第二名
-												.panel-heading.text-center Andrea DOVIZIOSO
-												.panel-body
-													img.rider-img(src="/img/motogp/rider/2015/rider_dovizioso.jpg")
-										.rider-content.col-md-4.col-xs-12
-											.panel.panel-default
-												.panel-heading.text-center 第三名
-												.panel-heading.text-center Andrea IANNONE
-												.panel-body
-													img.rider-img(src="/img/motogp/rider/2015/rider_iannone.jpg")
+										.row.circuit-section
+											.col-md-6.col-xs-12
+												img.circuit-img(src="/img/motogp/circuit/2015/#{race.circuitdetail}")
+											.col-md-6.col-xs-12
+												table.table.table-default
+													tr 
+														td 赛道长度
+														td #{race.cir_length}
+													tr 
+														td 左弯
+														td #{race.cir_lturns}
+													tr 
+														td 右弯
+														td #{race.cir_rturns}
+													tr 
+														td 最长直道
+														td #{race.cir_straight}
+													tr 
+														td 最快圈速
+														td #{race.cir_record}
+										.row.podium-section
+											.rider-content.col-md-4.col-xs-12
+												.panel.panel-default
+													.panel-heading.text-center 第一名
+													.panel-heading.text-center #{race.p1_name} 
+													.panel-body 
+														img.rider-img(src="/img/motogp/rider/2015/#{race.p1_photo}")
+											.rider-content.col-md-4.col-xs-12
+												.panel.panel-default
+													.panel-heading.text-center 第二名
+													.panel-heading.text-center #{race.p2_name}
+													.panel-body
+														img.rider-img(src="/img/motogp/rider/2015/#{race.p2_photo}")
+											.rider-content.col-md-4.col-xs-12
+												.panel.panel-default
+													.panel-heading.text-center 第三名
+													.panel-heading.text-center #{race.p3_name}
+													.panel-body
+														img.rider-img(src="/img/motogp/rider/2015/#{race.p3_photo}")
 							
 									
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
 						#team.title
 							h3 Team
 							p AAAAAAA
