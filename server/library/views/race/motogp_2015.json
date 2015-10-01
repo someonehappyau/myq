@@ -108,7 +108,53 @@
 			"p3_photo":		"rider_.jpg"
 		}
 
+	],
+	
+	"riders":[
+		{"number":"4","name":"Andrea Dovizioso","pic":"rider_dovizioso.jpg","nation":"意大利","national_flag":"ITA.png","team":"Ducati Team"},
+		{"number":"6","name":"Stefan Bradl","pic":"rider_stefanbradl.jpg","nation":"德国","national_flag":"GER.png","team":"Aprilia Racing Team Gresini"},
+		{"number":"8","name":"Hector Barbera","pic":"rider_hectorbarbera.jpg","nation":"西班牙","national_flag":"SPA.png","team":"Avintia Racing"},
+		{"number":"9","name":"Danilo Petrucci","pic":"rider_danilopetrucci.jpg","nation":"意大利","national_flag":"ITA.png","team":"Octo Pramac Racing"},
+		{"number":"15","name":"Alex De Angelis","pic":"rider_alexdeangelis.jpg","nation":"圣马力诺","national_flag":"RSM.png","team":"E-Motion IodaRacing Team"},
+		{"number":"17","name":"Karel Abraham","pic":"rider_karelabraham.jpg","nation":"捷克","national_flag":"CZE.png","team":"AB Motoracing"},
+		{"number":"19","name":"Alvaro Bautista","pic":"rider_alvarobautista.jpg","nation":"西班牙","national_flag":"SPA.png","team":"Aprilia Racing Team Gresini"},
+		{"number":"24","name":"Toni Elias","pic":"rider_tonielias.jpg","nation":"西班牙","national_flag":"SPA.png","team":"Forward Racing"},
+		{"number":"25","name":"Maverick Viñales","pic":"rider_maverickvinales.jpg","nation":"西班牙","national_flag":"SPA.png","team":"Team SUZUKI ECSTAR"},
+		{"number":"26","name":"Dani Pedrosa（佩德罗萨）","pic":"rider_pedrosa.jpg","nation":"西班牙","national_flag":"SPA.png","team":"Repsol Honda Team"},
+		{"number":"29","name":"Andrea Iannone","pic":"rider_iannone.jpg","nation":"意大利","national_flag":"ITA.png","team":"Ducati Team"},
+		{"number":"35","name":"Cal Crutchlow","pic":"rider_calcrutchlow.jpg","nation":"英国","national_flag":"GBR.png","team":"LCR Honda"},
+		{"number":"38","name":"Bradley Smith","pic":"rider_bradleysmith.jpg","nation":"英国","national_flag":"GBR.png","team":"Monster Yamaha Tech 3"},
+		{"number":"41","name":"Aleix Espargaro","pic":"rider_aleixespargaro.jpg","nation":"西班牙","national_flag":"SPA.png","team":"Team SUZUKI ECSTAR"},
+		{"number":"43","name":"Jack Miller","pic":"rider_jackmiller.jpg","nation":"澳大利亚","national_flag":"AUS.png","team":"LCR Honda"},
+		{"number":"44","name":"Pol Espargaro","pic":"rider_polespargaro.jpg","nation":"西班牙","national_flag":"SPA.png","team":"Monster Yamaha Tech 3"},
+		{"number":"45","name":"Scott Redding","pic":"rider_scottredding.jpg","nation":"英国","national_flag":"GBR.png","team":"EG 0,0 Marc VDS"},
+		{"number":"46","name":"Valentino Rossi（罗西）","pic":"rider_rossi.jpg","nation":"意大利","national_flag":"ITA.png","team":"Movistar Yamaha MotoGP"},
+		{"number":"50","name":"Eugene Laverty","pic":"rider_eugenelaverty.jpg","nation":"爱尔兰","national_flag":"IRL.png","team":"Aspar MotoGP Team"},
+		{"number":"63","name":"Mike Di Meglio","pic":"rider_mikedimeglio.jpg","nation":"法国","national_flag":"FRA.png","team":"Avintia Racing"},
+		{"number":"68","name":"Yonny Hernandez","pic":"rider_yonnyhernandez.jpg","nation":"哥伦比亚","national_flag":"COL.png","team":"Octo Pramac Racing"},
+		{"number":"69","name":"Nicky Hayden","pic":"rider_nickyhayden.jpg","nation":"美国","national_flag":"USA.png","team":"Aspar MotoGP Team"},
+		{"number":"76","name":"Loris Baz","pic":"rider_lorisbaz.jpg","nation":"法国","national_flag":"FRA.png","team":"Forward Racing"},
+		{"number":"93","name":"Marc Marquez（马奎兹）","pic":"rider_marquez.jpg","nation":"西班牙","national_flag":"SPA.png","team":"Repsol Honda Team"},
+		{"number":"99","name":"Jorge Lorenzo（洛伦佐）","pic":"rider_lorenzo.jpg","nation":"西班牙","national_flag":"SPA.png","team":"Movistar Yamaha MotoGP"}
+	],
+
+	"teams":[
+		{"name":"AB Motorracing","pic":"team_ab_motoracing.jpg","riders":[{"name":"Karel Abraham","pic":"rider_karelabraham.jpg"}]},
+		{"name":"Aprilia Racing Team Gresini","pic":"team_aprilia_racing_team_gresini.jpg","riders":[{"name":"Stefan Bradl","pic":"rider_stefanbradl.jpg"},{"name":"Alvaro Bautista","pic":"rider_alvarobautista.jpg"}]},
+		{"name":"Aspar MotoGP Team","pic":"team_aspar_motogp_team.jpg","riders":[{"name":"Eugene Laverty","pic":"rider_eugenelverty.jpg"},{"name":"Nicky Hayden","pic":"rider_nickyhayden.jpg"}]},
+		{"name":"Avintia Racing","pic":"team_avintia_racing.jpg","riders":[{"name":"Hector Barbera","pic":"rider_hectorbarbera.jpg"},{"name":"Mike Di Meglio","pic":"rider_mikedimeglio.jpg"}]},
+		{"name":"Ducati Team","pic":"team_ducati_team.jpg","riders":[{"name":"Andrea Dovizioso","pic":"rider_andreadovizioso.jpg"},{"name":"Andrea Iannone","pic":"rider_andreaiannone.jpg"}]},
+		{"name":"E-Motion IodaRacing Team","pic":"team_e_motion_iodaracing_team.jpg","riders":[{"name":"Alex De Angelis","pic":"rider_alexdeangelis.jpg"}]},
+		{"name":"EG 0,0 Marc VDS","pic":"team_eg_00_marc_vds.jpg","riders":[{"name":"Scott Redding","pic":"rider_scottredding.jpg"}]},
+		{"name":"Forward Racing","pic":"team_img_na.jpg","riders":[{"name":"Toni Elias","pic":"rider_tonielias.jpg"},{"name":"Loris Baz","pic":"rider_lorisbaz.jpg"}]},
+		{"name":"LCR Honda","pic":"team_lcr_honda.jpg","riders":[{"name":"Cal Crutchlow","pic":"rider_calcrutchlow.jpg"},{"name":"Jack Miller","pic":"rider_jackmiller.jpg"}]},
+		{"name":"Monster Yamaha Tech 3","pic":"team_monster_yamaha_tech_3.jpg","riders":[{"name":"Bradley Smith","pic":"rider_bradleysmith.jpg"},{"name":"Pol Espargaro","pic":"rider_polespargaro.jpg"}]},
+		{"name":"Movistar Yamaha MotoGP","pic":"team_movistar_yamaha_motogp.jpg","riders":[{"name":"Valentino Rossi","pic":"rider_valentinorossi.jpg"},{"name":"Jorge Lorenzo","pic":"rider_jorgelorenzo.jpg"}]},
+		{"name":"Octo Pramac Racing","pic":"team_octo_pramac_racing.jpg","riders":[{"name":"Danilo Petrucci","pic":"rider_danilopetrucci.jpg"},{"name":"Yonny Hernandez","pic":"rider_yonnyhernandez.jpg"}]},
+		{"name":"Repsol Honda Team","pic":"team_repsol_honda_team.jpg","riders":[{"name":"Dani Pedrosa","pic":"rider_danipedrosa.jpg"},{"name":"Marc Marquez","pic":"rider_marcmarquez.jpg"}]},
+		{"name":"Team SUZUKI ECSTAR","pic":"team_team_suzuki_ecstar.jpg","riders":[{"name":"Maverick Viñales","pic":"rider_maverickvinales.jpg"},{"name":"Aleix Espargaro","pic":"rider_aleixespargaro.jpg"}]}
 	]
+
 }
 
 		

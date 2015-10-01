@@ -96,45 +96,53 @@ block mainwindow
 							
 									
 						#team.title
-							h3 Team
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
+							.row
+								.col-md-12.col-xs-12
+									h3.text-center 车队 
+
+							.row.team-wrapper
+								each team in teams
+									.col-md-12.col-xs-12
+										.panel.panel-default
+											.panel-body
+												.row
+													.col-md-4.col-xs-12
+														.row
+															.col-md-12.col-xs-12
+																img(src="/img/motogp/team/2015/#{team.pic}")
+														.row
+															.col-md-12.col-xs-12
+																.text-right #{team.name}
+													each rider in team.riders
+														.col-md-4.col-xs-12
+															.panel.panel-default
+																.panel-head
+																	img(src="/img/motogp/rider/2015/#{rider.pic}")
+																.panel-body
+																	span #{rider.name}
+														
+
 						#rider.title
-							h3 Racer
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
-							p AAAAAAA
+							.row
+								.col-md-12.col-xs-12
+									h3.text-center 赛车手
+
+							.row
+								each rider in riders
+									.rider-block.col-md-3.col-xs-6
+										.panel.panel-default
+											.rider-image.panel-body
+												img(src="/img/motogp/rider/2015/#{rider.pic}")
+											.rider-content.panel-body
+												.row
+													.col-md-6.col-xs-6
+														img(src="/img/misc/national_flag/#{rider.national_flag}" title="#{rider.nation}")
+													.rider-number.col-md-6.col-xs-6.text-right #{rider.number}
+												.row
+													.rider-name.col-md-12.col-xs-12.text-right #{rider.name}
+												.row
+													.rider-team.col-md-12.col-xs-12.text-right #{rider.team}
+
 					.col-md-2#side-menubar-wrapper
 						nav.hidden-xs.hidden-sm#side-menubar
 							ul.nav

@@ -4,6 +4,9 @@
 }
 
 .calendar-wrapper{
+	max-width:800px;
+	margin-left:auto;
+	margin-right:auto;
 }
 
 .circuit-img{
@@ -38,4 +41,40 @@
 .circuit-section{
 	margin-top:10px;
 	margin-bottom:10px;
+}
+
+.rider-block{
+	padding:5px;
+}
+
+.rider-image{
+	padding:5px;
+}
+
+.rider-image img{
+	width:100%;
+}
+
+.rider-content{
+	padding-top:5px;
+	padding-left:15px;
+	padding-right:15px;
+	padding-bottom:10px;
+}
+
+.rider-content .rider-number{
+	font-size:30px;
+	font-weight:bold;
+}
+
+.rider-content .rider-name{
+
+}
+
+.rider-content .rider-team{
+
+}
+
+.team-wrapper{
+	max-width:800px;
 }

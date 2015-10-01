@@ -12,7 +12,9 @@ function getMotogp2015(req,res){
 	data=JSON.parse(fs.readFileSync(cfg.race.data.motogp.Y2015));
 	res.status(200).render('race/motogp_2015',
 							{riderStanding:data.riderStanding,
-							calendar:data.calendar});
+							calendar:data.calendar,
+							teams:data.teams,
+							riders:data.riders});
 };
 
 function getMotogp2016(req,res){
