@@ -1,6 +1,11 @@
-.title{
+.section-head{
 	margin-top: -60px;
 	padding-top:60px;
+}
+
+.title{
+	margin-top:50px;
+	margin-bottom:30px;
 }
 
 .calendar-wrapper{
@@ -77,4 +82,23 @@
 
 .team-wrapper{
 	max-width:800px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.team-wrapper .team-img{
+	width:100%;
+	padding-bottom:10px;
+}
+
+.team-wrapper .rider-img{
+	width:100%;
+}
+
+.team-wrapper .rider-img-panel{
+	padding:0;
+}
+
+.team-wrapper .rider-name{
+	font-size:14px;
 }
